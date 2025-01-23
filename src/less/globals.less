@@ -1,0 +1,268 @@
+@import "bootstrap/bootstrap.less";
+@import "nonbs-variables.less";
+
+html{overflow-x: hidden !important;}
+
+body{background-color: #FAD000;}
+
+.fr {float: right;}
+.fl {float: left;}
+
+.no-overflow-x{overflow-x: hidden;}
+a{text-decoration: none !important;}
+.full-height{height: 100%;}
+.custom-height(@height)
+{
+    height: @height;
+}
+li
+{
+    list-style-type: disc;
+}
+
+.down-arrow /*Meant to be used on a .row*/
+{ 
+    position: absolute; bottom: 0; width:100%; 
+    img
+    {
+        display: block; text-align: center; 
+        .center-block();
+        margin-bottom: 1%; 
+    }
+} 
+
+.slide-down-arrow /*For when hand cursor does not appear when hovering over the down arrow*/
+{
+    cursor: pointer;
+}
+
+.slide-splitter-content
+{
+    h2 { margin: 20px 0px 20px 20px;}
+    background-color: #FAD000;
+}
+
+.slide-splitter-empty
+{
+    height: 10%;
+    background-color: #FAD000;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+/*Colour classes*/
+
+.text-blvd-white
+{
+    color: @boulevardWhite;
+}
+
+.text-blvd-orange-hover
+{
+    color: white;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+}
+
+.text-blvd-orange-hover:hover
+{
+    color: @boulevardOrange;
+}
+
+.text-blvd-white-hover
+{
+    color: #FAD000;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+}
+
+.text-blvd-white-hover:hover
+{
+    color: @boulevardWhite;
+}
+
+.blvd-text
+{
+    color: @boulevardOrange;
+}
+
+.blvd-text-dark
+{
+    color: @boulevardDark;
+}
+
+/*END Color classes*/
+
+/*Myriad pro font*/
+
+.myriad-pro-reg-font(@font-size:1.25em)
+{
+    font-family: 'Myriad Pro Regular';
+    font-size: @font-size;
+}
+
+.myriad-pro-bold-font(@font-size:1.25em)
+{
+    font-family: 'Myriad Pro Bold';
+    font-size: @font-size;
+}
+
+.myriad-bold
+{
+    .myriad-pro-bold-font();
+}
+
+.myriad-reg
+{
+    .myriad-pro-reg-font();
+}
+
+/*End myriad pro font*/
+
+/*Font styles*/
+
+    /*Sidr menu fonts*/
+    #sideMenu #sidr-id-content #sidr-id-mainMenu li 
+    {
+        font-size: 1.25em;
+        a{ font-family: 'Myriad Pro Bold';}
+    }
+
+/*End font styles*/
+
+/*SOCIAL ICON STYLES*/
+
+/*Give both li and a tags the sprite sheets*/
+
+    #iconContainer ul
+    {
+        padding-left: 0;
+        margin-top: 5%;
+    }
+    
+    #socialIcons li
+    {
+       display: inline-block;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    #socialIcons li a
+    {
+        display: block;
+    }
+
+    .socialIcon-correct
+    {
+        margin-top: 1.25%;
+        margin-left: 5%;
+        width: 25%;
+    }
+
+    .crct-wdth {
+        width: 100%;
+    }
+
+
+    /*Add extra margin to the menu button*/
+    #navButtonFloat
+    {
+        margin-left: 1%;
+        margin-right: 18px;
+    }
+    
+    /*Specifcally for contact page "Follow us" links*/
+    .no-margin-left
+    {
+        margin-left: 0 !important;    
+    }
+
+/*END SOCIAL ICON STYLES*/
+
+/*floats for index page*/
+@media(min-width: @screen-lg-min)
+{
+    .fl-md
+    {
+        float: left;
+    }
+
+    /*Seperate media query does not work, must include next class here*/
+    .fr-md
+    {
+        float: right;
+    }  
+}
+
+@media(max-width: @screen-sm-max)
+{
+    fr-sm{float: right;}
+    fl-sm{float: left;}
+}
+
+/*Five column full width layout*/
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        position: relative;
+        min-height: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 20%;
+        float: left;
+    }
+
+    .text-center-md
+    {
+        text-align:center;
+    }   
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        position: relative;
+        min-height: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        position: relative;
+        min-height: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 20%;
+        float: left;
+    }
+}
+
+/*END Five column*/
+
+/*No column gutter*/
+.no-gutter [class*="col-"]
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+#navButtonFloat
+{
+    
+}
+
+/*End header navigation*/

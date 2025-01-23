@@ -1,0 +1,55 @@
+.left-gutter
+{
+    margin-left: 5%;
+}
+
+/*Common to all headers, must increase z-index to allow click*/
+.top-right-nav
+{
+    z-index: 2;
+}
+
+.masthead{padding-top: 15px; }
+.top-right-nav{padding-top: 15px;}
+
+#header-nav
+{
+    /*border-bottom: 1px solid #808080;*/
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+/*Must add margin between icons since we are using float: right*/
+#header-nav #socialIcons li
+{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/*Header navigation*/
+#header-nav
+{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 10;
+    width: 100%;
+    background-color: @boulevardOrange;
+}
+
+@media(max-width: @screen-sm-max)
+{
+    .headerMasthead
+    {
+        margin-top: 25px;
+        margin-left: 2.5%;
+    }
+}
+
+@media(min-width: @screen-md-min)
+{
+    .headerMasthead
+    {
+        margin-top: 25px;
+        margin-left: 1%;
+    }
+}
